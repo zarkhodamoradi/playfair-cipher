@@ -57,9 +57,6 @@ You'll be prompted to enter:
 
 ---
 
-Absolutely! Here's how you can add your example to the README in a nicely formatted way:
-
----
 
 ### 🔑 Example
 
