@@ -93,21 +93,27 @@ int main() {
     isKey[i] = false;
   }
 
+  int keySize ; 
+  keySize = key.length() ; 
+
   for (int k = 0; k < key.length(); k++) {
     key[k] = toupper(key[k]);
     if (key[k] == 'J')
       key[k] = 'I';
-    mat[k / 5][k % 5] = key[k];
-    if (!isKey[(int)key[k] - 65]) {
+      if (!isKey[(int)key[k] - 65]) {
+      mat[k / 5][k % 5] = key[k];
       isKey[(int)key[k] - 65] = true;
       place[(int)key[k] - 65] = k;
+    }
+    else {
+      keySize-- ; 
     }
   }
 
   int alphabet = 65;
   for (int i = 0; i < 5; i++) {
     for (int j = 0; j < 5; j++) {
-      if (i * 5 + j < key.length()) {
+      if (i * 5 + j <keySize) {
         continue;
       }
       while (isKey[alphabet - 65] == true) {
