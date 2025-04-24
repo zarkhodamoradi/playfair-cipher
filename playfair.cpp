@@ -16,11 +16,12 @@ void printMatrix() {
 string toUpperString(string text) {
   for (int i = 0; i < text.length(); i++) {
     text[i] = toupper(text[i]);
-    if(text[i] == 'J') text[i] = 'I' ; 
+    if (text[i] == 'J')
+      text[i] = 'I';
   }
   return text;
 }
-string encoder(string decodedText) {
+string encryptor(string decodedText) {
 
   int i = 0;
   string enText = "";
@@ -52,7 +53,7 @@ string encoder(string decodedText) {
 
   return enText;
 }
-string decoder(string encodedText) {
+string decryptor(string encodedText) {
 
   int i = 0;
   string deText = "";
@@ -93,27 +94,26 @@ int main() {
     isKey[i] = false;
   }
 
-  int keySize ; 
-  keySize = key.length() ; 
+  int keySize;
+  keySize = key.length();
 
   for (int k = 0; k < key.length(); k++) {
     key[k] = toupper(key[k]);
     if (key[k] == 'J')
       key[k] = 'I';
-      if (!isKey[(int)key[k] - 65]) {
+    if (!isKey[(int)key[k] - 65]) {
       mat[k / 5][k % 5] = key[k];
       isKey[(int)key[k] - 65] = true;
       place[(int)key[k] - 65] = k;
-    }
-    else {
-      keySize-- ; 
+    } else {
+      keySize--;
     }
   }
 
   int alphabet = 65;
   for (int i = 0; i < 5; i++) {
     for (int j = 0; j < 5; j++) {
-      if (i * 5 + j <keySize) {
+      if (i * 5 + j < keySize) {
         continue;
       }
       while (isKey[alphabet - 65] == true) {
@@ -132,7 +132,7 @@ int main() {
   printMatrix();
   int choice;
 
-  cout << "\n1. Encode\n2. Decode\nYour choice: ";
+  cout << "\n1. Encrypt\n2. Decrypt\nYour choice: ";
   cin >> choice;
   cin.ignore();
   string text;
@@ -140,12 +140,12 @@ int main() {
     cout << "Enter plaintext: ";
     getline(cin, text);
     text = toUpperString(text);
-    cout << "Encoded text: " << encoder(text) << endl;
+    cout << "ciphertext: " << encryptor(text) << endl;
   } else if (choice == 2) {
     cout << "Enter ciphertext: ";
     getline(cin, text);
     text = toUpperString(text);
-    cout << "Decoded text: " << decoder(text) << endl;
+    cout << "plaintext: " << decryptor(text) << endl;
   } else {
     cout << "Invalid option.\n";
   }

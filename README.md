@@ -23,9 +23,9 @@ The main idea:
 
 - It takes a **key** and builds the 5x5 matrix.
 - Treats 'J' as 'I' to fit the 25-letter constraint.
-- You can **encode** or **decode** a message:
-  - **Encoding** uses the Playfair rules to encrypt the plaintext.
-  - **Decoding** reverses those steps.
+- You can **encrypt** or **decrypt** a message:
+  - **Encryption** uses the Playfair rules to encrypt the plaintext.
+  - **Decryption** reverses those steps.
 
 Example matrix with key `MONARCHY`:
 
@@ -71,11 +71,11 @@ F G H I K
 M N P Q S 
 V W X Y Z 
 
-1. Encode
-2. Decode
+1. Encrypt
+2. Decrypt
 Your choice: 2
 Enter ciphertext: WGWLOROUBTEADOUBOVROUBTDLRFCFLOUBTEAROUBTDDNXUAZ
-Decoded text: NEVERTROUBLEABOUTXTROUBLETILLTROUBLETROUBLESYODX
+plaintext: NEVERTROUBLEABOUTXTROUBLETILLTROUBLETROUBLESYODX
 ```
 
 ---
@@ -85,7 +85,7 @@ Decoded text: NEVERTROUBLEABOUTXTROUBLETILLTROUBLETROUBLESYODX
 - Handles uppercase and lowercase input
 - Ignores the letter 'J' by treating it as 'I'
 - Pads odd-length strings with `'X'` to make valid digraphs
-- Implements full **encode** and **decode** logic
+- Implements full **encrypt** and **decrypt** logic
 
 ---
 
