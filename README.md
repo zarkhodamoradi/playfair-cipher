@@ -1,10 +1,10 @@
-# 🔐 Playfair Cipher in C++
+# Playfair Cipher in C++
 
 This is a **simple C++ implementation of the Playfair Cipher** created purely for educational purposes. It helps you understand how the classical Playfair encryption and decryption techniques work. The code is meant to demonstrate the logic and mechanics of the cipher in a clear and minimal way.
 
 ---
 
-## 📌 What is the Playfair Cipher?
+## What is the Playfair Cipher?
 
 The **Playfair Cipher** is a manual symmetric encryption technique and was the first digraph substitution cipher. Invented in 1854 by Charles Wheatstone, it encrypts pairs of letters (digraphs), making it more secure than simple monoalphabetic ciphers like Caesar.
 
@@ -19,7 +19,7 @@ The main idea:
 
 ---
 
-## 🧠 How This Code Works
+## How This Code Works
 
 - It takes a **key** and builds the 5x5 matrix.
 - Treats 'J' as 'I' to fit the 25-letter constraint.
@@ -39,7 +39,7 @@ U V W X Z
 
 ---
 
-## 🛠 How to Run
+##  How to Run
 
 1. Make sure you have a C++ compiler (like `g++`) installed.
 2. Compile the program:
@@ -58,7 +58,7 @@ You'll be prompted to enter:
 ---
 
 
-### 🔑 Example
+###  Example
 
 ```
 Enter the key : trouble
@@ -77,7 +77,7 @@ plaintext: NEVERTROUBLEABOUTXTROUBLETILLTROUBLETROUBLESYODX
 
 ---
 
-## 📦 Features
+##  Features
 
 - Handles uppercase and lowercase input
 - Ignores the letter 'J' by treating it as 'I'
@@ -86,13 +86,13 @@ plaintext: NEVERTROUBLEABOUTXTROUBLETILLTROUBLETROUBLESYODX
 
 ---
 
-## 📝 Disclaimer
+##  Disclaimer
 
 This code is **not secure** for real-world encryption. It is meant only as a **learning tool** to understand classical ciphers. Modern cryptography is much more complex and secure!
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 If you find bugs, have suggestions, or want to expand the project (e.g., support punctuation, better input handling), feel free to fork the repo and send a pull request.
 
